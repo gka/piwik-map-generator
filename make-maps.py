@@ -47,7 +47,7 @@ for region in regions:
     map_filename = map_output_dir + region + '.svg'
     if not os.path.exists(map_filename):
         print region
-        K.generate(cfg, map_filename, preview=True)
+        K.generate(cfg, map_filename, preview=False)
 
 err = []
 ignore = set(get_json('ignore-countries.json'))
