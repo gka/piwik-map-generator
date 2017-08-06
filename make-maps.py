@@ -35,7 +35,9 @@ K = Kartograph()
 cfg = json.loads(open('worldmap.json').read())
 #print 'world'
 cfg['export']['width'] = width
-#K.generate(cfg, map_output_dir + 'world.svg', preview=False)
+if not os.path.exists(map_output_dir + 'world.svg'):
+    print 'world'
+    K.generate(cfg, map_output_dir + 'world.svg', preview=False)
 
 regions = get_json('region-bbox.json')
 
