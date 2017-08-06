@@ -8,7 +8,7 @@
 		"filter": ["iso_a3", "is not", "ATA"],
 		"simplify": false,
 		"attributes": {
-			"ISO_A3": "iso_a3",
+			"ISO": "iso_a3",
 			"NAME": "name",
 			"POP_EST": "pop"
 		},

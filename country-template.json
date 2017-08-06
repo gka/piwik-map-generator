@@ -6,7 +6,7 @@
 		"id": "context",
 		"src": "shp/ne_50m_admin_0_countries.shp",
 		"attributes": {
-			"iso": "GU_A3"
+			"iso": "iso_a3"
 		},
 		"simplify": 1.5,
 		"charset": "latin1"
@@ -27,7 +27,7 @@
 	}, {
 		"id": "lakes",
 		"src": "shp/ne_50m_lakes.shp",
-		"filter": ["ScaleRank", "<", 3],
+		"filter": ["scalerank", "<", 3],
 		"simplify": 0.5,
 		"filter-islands": 15,
 		"ignore-holes": true,

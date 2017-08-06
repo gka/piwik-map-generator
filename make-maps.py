@@ -87,5 +87,26 @@ for adm_code in adm_codes:
         except KartographError, e:
             err.append(adm_code)
             print e.message
+        except KeyError, e:
+            try:
+                tmpl['layers'][l]['attributes']['iso3'] = 'gu_a3'
+                tmpl['layers'][l]['attributes']['name'] = 'name'
+                tmpl['layers'][l]['attributes']['fips'] = 'fips'
+                tmpl['layers'][l]['attributes']['fips_'] = 'fips_alt'
+                tmpl['layers'][l]['attributes']['p'] = 'postal'
+                tmpl['layers'][l]['filter'][0] = 'gu_a3'
+                K.generate(tmpl, map_filename, preview=False)
+            except KartographError, e:
+                err.append(adm_code)
+                print e.message
+            except KeyError, e:
+                try:
+                    tmpl['layers'][l]['attributes']['iso3'] = 'ADM0_A3'
+                    tmpl['layers'][l]['filter'][0] = 'ADM0_A3'
+                    K.generate(tmpl, map_filename, preview=False)
+                except KartographError, e:
+                    err.append(adm_code)
+                    print e.message
+
 
 print err
