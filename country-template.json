@@ -12,7 +12,7 @@
 		"charset": "latin1"
 	},{
 		"id": "regions",
-		"src": "shp/ne_10m_admin_1_states_provinces_shp.shp",
+		"src": "shp/ne_10m_admin_1_states_provinces.shp",
 		"attributes": {
 			"iso3": "ISO",
 			"name": "NAME_1",
@@ -26,7 +26,7 @@
 		"simplify": 1.2
 	}, {
 		"id": "lakes",
-		"src": "shp/50m-lakes.shp",
+		"src": "shp/ne_50m_lakes.shp",
 		"filter": ["ScaleRank", "<", 3],
 		"simplify": 0.5,
 		"filter-islands": 15,
