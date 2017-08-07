@@ -1,4 +1,3 @@
 {
-    "USA": ["postal", "not in", ["AK", "HI"]],
-    "NOR": ["FIPS_1", "is not", "JN00"]
+    "USA": ["postal", "not in", ["AK", "HI"]]
 }
